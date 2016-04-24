@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#162f39"
+    tools:context="tech.codesome.tictactoe.FirstScreen">
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="#a3cbdb"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/p1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player1"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/app_name"/>
+
+    <EditText
+        android:id="@+id/p1_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Player 1 name"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/p1_text"/>
+
+    <TextView
+        android:id="@+id/p2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player2"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/p1_edittext"/>
+
+    <EditText
+        android:id="@+id/p2_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Player 2 name"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/p2_text"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Game"
+        android:layout_alignParentBottom="true"
+        android:onClick="submitData"/>
+
+
+</RelativeLayout>

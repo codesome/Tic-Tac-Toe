@@ -1,0 +1,219 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#162f39"
+    tools:context="tech.codesome.tictactoe.MainGameActivity">
+
+    <LinearLayout
+        android:id="@+id/p1_name_view"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/p1_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Player1"
+            android:textColor="#162f39"
+            android:textAlignment="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/player_name_active"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="X"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/p2_name_view"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/p2_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Player2"
+            android:textColor="#a3cbdb"
+            android:textAlignment="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/player_name"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="O"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/p1_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="3dp"
+            android:text="0"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rematch"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:onClick="rematch"/>
+        <TextView
+            android:id="@+id/p2_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="3dp"
+            android:text="0"/>
+
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <!-- [1][1]-->
+        <Button
+            android:id="@+id/id11"
+            android:text=""
+            android:layout_height="95dp"
+            android:layout_width="95dp"
+            android:textSize="60sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/border"
+            android:onClick="fieldClicked"/>
+
+        <!-- [1][2]-->
+        <Button
+            android:id="@+id/id12"
+            android:text=""
+            android:layout_height="95dp"
+            android:layout_width="95dp"
+            android:textSize="60sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/border"
+            android:onClick="fieldClicked"/>
+
+        <!-- [1][3]-->
+        <Button
+            android:id="@+id/id13"
+            android:text=""
+            android:layout_height="95dp"
+            android:layout_width="95dp"
+            android:textSize="60sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/border"
+            android:onClick="fieldClicked"/>
+
+        <!-- [2][1]-->
+        <Button
+            android:id="@+id/id21"
+            android:text=""
+            android:layout_height="95dp"
+            android:layout_width="95dp"
+            android:textSize="60sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/border"
+            android:onClick="fieldClicked"/>
+
+        <!-- [2][2]-->
+        <Button
+            android:id="@+id/id22"
+            android:text=""
+            android:layout_height="95dp"
+            android:layout_width="95dp"
+            android:textSize="60sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/border"
+            android:onClick="fieldClicked"/>
+
+        <!-- [2][3]-->
+        <Button
+            android:id="@+id/id23"
+            android:text=""
+            android:layout_height="95dp"
+            android:layout_width="95dp"
+            android:textSize="60sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/border"
+            android:onClick="fieldClicked"/>
+
+        <!-- [3][1]-->
+        <Button
+            android:id="@+id/id31"
+            android:text=""
+            android:layout_height="95dp"
+            android:layout_width="95dp"
+            android:textSize="60sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/border"
+            android:onClick="fieldClicked"/>
+
+        <!-- [3][2]-->
+        <Button
+            android:id="@+id/id32"
+            android:text=""
+            android:layout_height="95dp"
+            android:layout_width="95dp"
+            android:textSize="60sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/border"
+            android:onClick="fieldClicked"/>
+
+        <!-- [3][3]-->
+        <Button
+            android:id="@+id/id33"
+            android:text=""
+            android:layout_height="95dp"
+            android:layout_width="95dp"
+            android:textSize="60sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/border"
+            android:onClick="fieldClicked"/>
+
+    </GridLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="End"
+        android:textColor="#fff"
+        android:background="#d9534f"
+        android:onClick="endGame"/>
+
+</RelativeLayout>
